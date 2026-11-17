@@ -1,11 +1,11 @@
 package workshop.person.entity;
 
 public class PersonEntity {
-	
-	private String name;
+
+	private String name; 
 	private char gender;
-	private String ssn;
-	private String address;
+	private String ssn; 
+	private String address; 
 	private String phone;
 	
 	public PersonEntity() {
@@ -13,11 +13,14 @@ public class PersonEntity {
 	}
 
 	public PersonEntity(String name, String ssn, String address, String phone) {
-		super();
-		this.name = name;
-		this.ssn = ssn;
-		this.address = address;
-		this.phone = phone;
+//		this.name = name;
+//		this.ssn = ssn;
+//		this.address = address;
+//		this.phone = phone;
+		setName(name);
+		setSsn(ssn);
+		setAddress(address);
+		setPhone(phone);
 	}
 
 	public String getName() {
@@ -42,6 +45,13 @@ public class PersonEntity {
 
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
+		//0508073457896
+		char genderNum = ssn.charAt(6);
+		if(genderNum == '1' || genderNum == '3') {
+			setGender('남');			
+		}else { //2,4
+			setGender('여');
+		}
 	}
 
 	public String getAddress() {
@@ -59,7 +69,6 @@ public class PersonEntity {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
 	
 	
 }
