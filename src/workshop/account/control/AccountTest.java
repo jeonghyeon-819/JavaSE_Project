@@ -24,12 +24,15 @@ public class AccountTest {
 			System.out.println("고객번호 = " + account2.getCustId());
 			System.out.println("계좌번호 = " + account2.getAccId());
 			System.out.println("잔액 = " + account2.getBalance());
-
+			
+			account2.withdraw(60000);
+			
 			// toString();
 			System.out.println(account2);
 
 		} catch (InsufficientBalanceException e) {
 			System.out.println("Error 메시지 = " + e.getMessage() + e.getCurrentBalance());
 		}
+		
 	}
 }
