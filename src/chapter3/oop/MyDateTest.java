@@ -1,6 +1,6 @@
 package chapter3.oop;
 
-// Run 실행 단축키 : ctrl + f11
+//Run 실행 단축키 ctrl + f11
 public class MyDateTest {
 	public static void main(String[] args) {
 		MyDate date = new MyDate();
@@ -14,5 +14,4 @@ public class MyDateTest {
 		System.out.println(date2.getMonth());
 		System.out.println(date2.getDay());
 	}
-
 }
